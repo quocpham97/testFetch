@@ -3,7 +3,7 @@ import "./App.css";
 import CouponSection from "./components/coupon-section";
 import Navbar from "./components/navbar";
 import { sections } from "./utils";
-import bg from "./assets/images/bg-1.png";
+import bg from "./assets/images/bg.png";
 
 function App() {
   return (

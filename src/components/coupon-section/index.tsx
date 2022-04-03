@@ -15,7 +15,7 @@ function CouponSection(props: IProps) {
       <p className="font-semibold p-6" style={{ color: "#171725" }}>
         {sectionName}
       </p>
-      <div className="flex overflow-x-auto mx-3 pb-6">
+      <div className="flex overflow-x-auto px-3 pb-6">
         {coupons.map((coupon, index) => (
           <Coupon {...coupon} key={index} />
         ))}
