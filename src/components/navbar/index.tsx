@@ -2,8 +2,8 @@ import React from "react";
 
 function Navbar() {
   return (
-    <nav className="flex flex-row h-24 fixed bottom-0 w-full justify-center items-center text-center bg-white border-solid border-t-2 border-gray-300 box-content">
-      <div className="flex flex-auto justify-center items-center">
+    <nav className="flex flex-row h-24 fixed bottom-0 w-full bg-white border-solid border-t-2 border-gray-300 box-content">
+      <div className="flex flex-auto justify-center mt-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-8 w-8"
@@ -19,7 +19,7 @@ function Navbar() {
           />
         </svg>
       </div>
-      <div className="flex flex-auto justify-center items-center">
+      <div className="flex flex-auto justify-center mt-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-8 w-8"
@@ -35,7 +35,7 @@ function Navbar() {
           />
         </svg>
       </div>
-      <div className="flex flex-auto justify-center items-center">
+      <div className="flex flex-auto justify-center mt-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-8 w-8"
@@ -51,7 +51,7 @@ function Navbar() {
           />
         </svg>
       </div>
-      <div className="flex flex-auto justify-center items-center">
+      <div className="flex flex-auto justify-center mt-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-8 w-8"
