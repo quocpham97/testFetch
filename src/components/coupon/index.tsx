@@ -6,7 +6,7 @@ function Coupon(props: CouponModel) {
 
   return (
     <div
-      className="rounded mx-3"
+      className="rounded mx-3 overflow-hidden"
       style={{
         minWidth: "200px",
         maxWidth: "200px",
