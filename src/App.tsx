@@ -28,7 +28,9 @@ function App() {
             </button>
           </div>
           <div className="mb-2 px-2">
-            <h1 className="text-3xl font-semibold leading-10 text-white">Silver Tier</h1>
+            <h1 className="font-semibold leading-10 text-white" style={{ fontSize: "32px" }}>
+              Silver Tier
+            </h1>
           </div>
           <div className="px-2">
             <p>
@@ -49,7 +51,7 @@ function App() {
             }}
           >
             <div>
-              <p className="font-semibold ">Available Coin balance</p>
+              <p className="text-sm font-semibold">Available Coin balance</p>
             </div>
             <div className="my-2">
               <h1 className="text-5xl font-normal" style={{ lineHeight: "56px", color: "#171725" }}>

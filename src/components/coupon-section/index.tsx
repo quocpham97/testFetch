@@ -12,7 +12,7 @@ function CouponSection(props: IProps) {
 
   return (
     <div>
-      <p className="font-semibold p-6" style={{ color: "#171725" }}>
+      <p className="text-lg font-semibold leading-6 p-6" style={{ color: "#171725" }}>
         {sectionName}
       </p>
       <div className="flex overflow-x-auto px-3 pb-6">

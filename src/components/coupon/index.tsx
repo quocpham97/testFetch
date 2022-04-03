@@ -18,10 +18,7 @@ function Coupon(props: CouponModel) {
     >
       <img src={image} alt="" className="w-full h-24" />
       <div className="p-4">
-        <p
-          className="font-semibold text-lg leading-6"
-          style={{ color: `${canBuy ? "#0062FF" : "#696974"}` }}
-        >
+        <p className="font-semibold" style={{ color: `${canBuy ? "#0062FF" : "#696974"}` }}>
           {title}
         </p>
         <p className="my-2">{description}</p>
