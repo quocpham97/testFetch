@@ -2,7 +2,7 @@ import React from "react";
 import { CouponModel } from "../../utils";
 
 function Coupon(props: CouponModel) {
-  const { title, description, isInsufficient, isSpecial, image } = props;
+  const { title, description, isInsufficient, isEnable, image } = props;
 
   return (
     <div
@@ -20,7 +20,7 @@ function Coupon(props: CouponModel) {
       <div className="p-4">
         <p
           className="font-semibold text-lg leading-6"
-          style={{ color: `${isSpecial ? "#0062FF" : "#696974"}` }}
+          style={{ color: `${isEnable ? "#0062FF" : "#696974"}` }}
         >
           {title}
         </p>

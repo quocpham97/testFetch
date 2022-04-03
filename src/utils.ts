@@ -10,7 +10,7 @@ export interface CouponModel {
   image: string;
   description: string;
   isInsufficient: boolean;
-  isSpecial: boolean;
+  isEnable: boolean;
 }
 
 export interface Section {
@@ -24,14 +24,14 @@ const petrols: CouponModel[] = [
     image: imgPetrol,
     description: "50% discount for every $100 top-up on your Shell Petrol Card",
     isInsufficient: false,
-    isSpecial: true,
+    isEnable: true,
   },
   {
     title: "1,000 Coins",
     image: imgPetrol2,
     description: "70% discount top-up on your Shell Petrol Card",
     isInsufficient: true,
-    isSpecial: false,
+    isEnable: false,
   },
 ];
 
@@ -41,14 +41,14 @@ const rentalRebates: CouponModel[] = [
     image: imgRentalRebate,
     description: "Get $20 Rental rebate",
     isInsufficient: false,
-    isSpecial: true,
+    isEnable: true,
   },
   {
     title: "15 Coins",
     image: imgRentalRebate2,
     description: "Get $500 Rental rebate",
     isInsufficient: false,
-    isSpecial: true,
+    isEnable: true,
   },
 ];
 
@@ -58,14 +58,14 @@ const foodBeverage: CouponModel[] = [
     image: imgFoodBeverage,
     description: "NTUC Fairprice $50 Voucher",
     isInsufficient: false,
-    isSpecial: true,
+    isEnable: true,
   },
   {
     title: "5 Coins",
     image: imgFoodBeverage2,
     description: "Free Cold Stone Sundae at any flavour!",
     isInsufficient: false,
-    isSpecial: true,
+    isEnable: true,
   },
 ];
 
