@@ -23,15 +23,14 @@ function App() {
           <section className="p-4 pb-52" style={{ backgroundColor: "#171725" }}>
             <div className="ml-2 mb-4 mt-11">
               <button className="rounded-full bg-white p-2" style={{ color: "#171725" }}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15 18L9 12L15 6"
+                    stroke="#171725"
+                    strokeWidth="2"
+                    strokeLinecap="square"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </button>
             </div>
