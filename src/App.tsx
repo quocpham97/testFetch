@@ -20,12 +20,12 @@ function App() {
         style={{ color: "#B5B5BE" }}
       >
         <div className="mb-32">
-          <section className="p-4 pb-52 min" style={{ backgroundColor: "#171725" }}>
+          <section className="p-4 pb-52" style={{ backgroundColor: "#171725" }}>
             <div className="ml-2 mb-4 mt-11">
-              <button className="rounded-full bg-white p-3" style={{ color: "#171725" }}>
+              <button className="rounded-full bg-white p-2" style={{ color: "#171725" }}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className="h-5 w-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -36,14 +36,13 @@ function App() {
               </button>
             </div>
             <div className="mb-2 px-2">
-              <h1 className="font-semibold leading-10 text-white" style={{ fontSize: "32px" }}>
+              <h3 className="font-semibold leading-10 text-white" style={{ fontSize: "32px" }}>
                 Silver Tier
-              </h1>
+              </h3>
             </div>
             <div className="px-2">
-              <p>
-                In Silver Tier, every $1 in rental fee paid, you get 2 coins to redeem exclusive
-                rewards.
+              <p style={{ letterSpacing: "-0.005em" }}>
+                In Silver Tier, every $1 in rental fee paid, you get 2 coins to redeem exclusive rewards.
               </p>
             </div>
           </section>
@@ -59,44 +58,55 @@ function App() {
               }}
             >
               <div>
-                <p className="text-sm font-semibold">Available Coin balance</p>
+                <p className="text-sm font-semibold leading-6">Available Coin balance</p>
               </div>
               <div className="my-2">
                 <h1
                   className="text-5xl font-normal"
-                  style={{ lineHeight: "56px", color: "#171725" }}
+                  style={{
+                    lineHeight: "56px",
+                    color: "#171725",
+                    letterSpacing: "-0.5px",
+                  }}
                 >
                   {userInfo.availableCoin}
                 </h1>
               </div>
-              <div className="my-8">
-                <div className="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-300">
+              <div style={{ marginTop: "33px", marginBottom: "34px" }}>
+                <div
+                  className="w-full dark:bg-gray-300"
+                  style={{
+                    height: "5px",
+                    backgroundColor: "#E2E2EA",
+                    borderRadius: "2.5px",
+                  }}
+                >
                   <div
-                    className="bg-blue-600 h-1.5 rounded-full"
-                    style={{ width: `${(userInfo.paid * 100) / userInfo.nextAchieve}%` }}
+                    style={{
+                      width: `${(userInfo.paid * 100) / userInfo.nextAchieve}%`,
+                      height: "5px",
+                      backgroundColor: "#0062FF",
+                      borderRadius: "2.5px",
+                    }}
                   ></div>
                 </div>
               </div>
-              <div className="my-2">
+              <div className="my-2" style={{ letterSpacing: "-0.005em" }}>
                 <p>You have paid rental fee for {formatter.format(userInfo.paid)}.</p>
-                <p>
-                  Pay more {formatter.format(userInfo.nextAchieve - userInfo.paid)} to achieve Gold
-                  Tier.
-                </p>
+                <p>Pay more {formatter.format(userInfo.nextAchieve - userInfo.paid)} to achieve Gold Tier.</p>
               </div>
-              <div className="my-4 text-blue-600">
-                <a className="flex">
+              <div className="my-4">
+                <a className="flex" style={{ color: "#0062FF", letterSpacing: "-0.005em" }}>
                   <span>View tier benefits </span>
                   <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9 18L15 12L9 6"
+                        stroke="#0062FF"
+                        strokeWidth="2"
+                        strokeLinecap="square"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </span>
                 </a>
@@ -109,7 +119,7 @@ function App() {
                   My Coupons
                 </button>
               </div>
-              <div className="text-center">
+              <div className="text-center text-sm" style={{ letterSpacing: "-0.5px" }}>
                 <p>Updated : 02/11/2021</p>
               </div>
             </div>
@@ -117,11 +127,7 @@ function App() {
           {sections &&
             sections.map((section) => (
               <section>
-                <CouponSection
-                  sectionName={section.sectionName}
-                  coupons={section.coupons}
-                  key={section.id}
-                />
+                <CouponSection sectionName={section.sectionName} coupons={section.coupons} key={section.id} />
               </section>
             ))}
         </div>
