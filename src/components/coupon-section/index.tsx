@@ -16,8 +16,8 @@ function CouponSection(props: IProps) {
         {sectionName}
       </p>
       <div className="flex overflow-x-auto px-3 pb-6">
-        {coupons.map((coupon, index) => (
-          <Coupon {...coupon} key={index} />
+        {coupons.map((coupon) => (
+          <Coupon {...coupon} key={coupon.id} />
         ))}
       </div>
     </div>

@@ -6,73 +6,83 @@ import imgFoodBeverage from "./assets/images/food-beverage.png";
 import imgFoodBeverage2 from "./assets/images/food-beverage-2.png";
 
 export interface CouponModel {
-  title: string;
+  id: number;
+  price: number;
   image: string;
   description: string;
-  canBuy: boolean;
 }
 
 export interface Section {
+  id: number;
   sectionName: string;
   coupons: CouponModel[];
 }
 
 const petrols: CouponModel[] = [
   {
-    title: "15 Coins",
+    id: 1101,
+    price: 15,
     image: imgPetrol,
     description: "50% discount for every $100 top-up on your Shell Petrol Card",
-    canBuy: true,
   },
   {
-    title: "1,000 Coins",
+    id: 1105,
+    price: 1000,
     image: imgPetrol2,
     description: "70% discount top-up on your Shell Petrol Card",
-    canBuy: false,
   },
 ];
 
 const rentalRebates: CouponModel[] = [
   {
-    title: "20 Coins",
+    id: 1102,
+    price: 20,
     image: imgRentalRebate,
     description: "Get $20 Rental rebate",
-    canBuy: true,
   },
   {
-    title: "15 Coins",
+    id: 1108,
+    price: 15,
     image: imgRentalRebate2,
     description: "Get $500 Rental rebate",
-    canBuy: true,
   },
 ];
 
 const foodBeverage: CouponModel[] = [
   {
-    title: "25 Coins",
+    id: 1110,
+    price: 25,
     image: imgFoodBeverage,
     description: "NTUC Fairprice $50 Voucher",
-    canBuy: true,
   },
   {
-    title: "5 Coins",
+    id: 1112,
+    price: 5,
     image: imgFoodBeverage2,
     description: "Free Cold Stone Sundae at any flavour!",
-    canBuy: true,
   },
 ];
 
 export const sections: Section[] = [
   {
+    id: 1,
     sectionName: "Petrol",
     coupons: petrols,
   },
   {
+    id: 2,
     sectionName: "Rental Rebate",
     coupons: rentalRebates,
   },
   {
+    id: 3,
     sectionName: "Food and Beverage",
     coupons: foodBeverage,
   },
 ];
+
+export const formatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  maximumFractionDigits: 0,
+});
