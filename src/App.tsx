@@ -91,7 +91,7 @@ function App() {
                   ></div>
                 </div>
               </div>
-              <div className="my-2" style={{ letterSpacing: "-0.005em" }}>
+              <div className="my-2" style={{ letterSpacing: "-0.005em", color: "#92929D" }}>
                 <p>You have paid rental fee for {formatter.format(userInfo.paid)}.</p>
                 <p>Pay more {formatter.format(userInfo.nextAchieve - userInfo.paid)} to achieve Gold Tier.</p>
               </div>
