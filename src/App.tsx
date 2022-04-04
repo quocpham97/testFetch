@@ -23,7 +23,13 @@ function App() {
           <section className="p-4 pb-52" style={{ backgroundColor: "#171725" }}>
             <div className="ml-2 mb-4 mt-11">
               <button className="rounded-full bg-white p-2" style={{ color: "#171725" }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M15 18L9 12L15 6"
                     stroke="#171725"
@@ -41,13 +47,14 @@ function App() {
             </div>
             <div className="px-2">
               <p style={{ letterSpacing: "-0.005em" }}>
-                In Silver Tier, every $1 in rental fee paid, you get 2 coins to redeem exclusive rewards.
+                In Silver Tier, every $1 in rental fee paid, you get 2 coins to redeem exclusive
+                rewards.
               </p>
             </div>
           </section>
           <section className="-mt-52 px-4">
             <div
-              className="mt-10 p-6 bg-white rounded-lg box-content"
+              className="mt-10 p-6 bg-white rounded-lg box-border"
               style={{
                 border: "1px solid #FAFAFB",
                 boxShadow: "0px 12px 18px rgba(23, 23, 37, 0.04)",
@@ -92,13 +99,22 @@ function App() {
               </div>
               <div className="my-2" style={{ letterSpacing: "-0.005em", color: "#92929D" }}>
                 <p>You have paid rental fee for {formatter.format(userInfo.paid)}.</p>
-                <p>Pay more {formatter.format(userInfo.nextAchieve - userInfo.paid)} to achieve Gold Tier.</p>
+                <p>
+                  Pay more {formatter.format(userInfo.nextAchieve - userInfo.paid)} to achieve Gold
+                  Tier.
+                </p>
               </div>
               <div className="my-4">
                 <a className="flex" style={{ color: "#0062FF", letterSpacing: "-0.005em" }}>
                   <span>View tier benefits </span>
                   <span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <path
                         d="M9 18L15 12L9 6"
                         stroke="#0062FF"
@@ -126,7 +142,11 @@ function App() {
           {sections &&
             sections.map((section) => (
               <section>
-                <CouponSection sectionName={section.sectionName} coupons={section.coupons} key={section.id} />
+                <CouponSection
+                  sectionName={section.sectionName}
+                  coupons={section.coupons}
+                  key={section.id}
+                />
               </section>
             ))}
         </div>
