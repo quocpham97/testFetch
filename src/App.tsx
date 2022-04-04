@@ -52,7 +52,7 @@ function App() {
               </p>
             </div>
           </section>
-          <section className="-mt-52 px-4">
+          <section className="px-4" style={{ marginTop: "-216px" }}>
             <div
               className="mt-10 p-6 bg-white rounded-lg box-border"
               style={{
